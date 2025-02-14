@@ -1,0 +1,50 @@
+Vision Statement
+
+We are developing a library databse to allow a library to track 
+all the essential functions of a library. A few of these functions include
+storing library property, including books and magazines, and their 
+associated information, as well as keeping track of library members of 
+various categories and their borrowing activity, including any fines or fees.
+
+Scope Statement
+
+Scope statement here.
+
+Team Roles
+    Admin: Sam Kelemen
+    Meeting Logger: Aiden Barnard
+    Head of Design: Daniel Bobadilla
+    Tech Coordinator: Jorge Trujillo
+    Lead Dev: Liam Aga
+
+Team Profiles
+
+    Aiden Barnard
+    Email: 
+    Availability (weekly):
+    Computing Platforms:
+    Languages:
+
+    Daniel Bobadilla
+    Email:
+    Availability (weekly):
+    Computing Platforms:
+    Languages:
+
+    Jorge Trujillo
+    Email:
+    Availability (weekly):
+    Computing Platforms:
+    Languages:
+
+    Liam Aga
+    Email:
+    Availability (weekly):
+    Computing Platforms:
+    Languages:
+
+    Sam Kelemen
+    Email: samkelemen@ku.edu
+    Availability (weekly): MWF: 8:00-1:50PM, 3:00PM- , TTh - 4:00PM-
+    Computing Platforms: Windows 10/11, Mac, Linux
+    Languages: Python, C/C++, C#, Java, JS, Haskell, MIPS Assembly, Binary, Scratch, Bash, HTML/CSS
