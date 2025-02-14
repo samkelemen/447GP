@@ -32,10 +32,10 @@ Team Profiles
     Languages:
 
     Jorge Trujillo
-    Email:
-    Availability (weekly):
-    Computing Platforms:
-    Languages:
+    Email: jorge.trujillo@ku.edu
+    Availability (weekly): MWF: 2:00-, TTR: 6:00-
+    Computing Platforms: MacOS, Linux
+    Languages: Python, Java, HTML, C, Dart, JavaScript
 
     Liam Aga
     Email:
