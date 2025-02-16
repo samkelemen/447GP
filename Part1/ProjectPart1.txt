@@ -38,10 +38,10 @@ Team Profiles
     Languages: Python, Java, HTML, C, Dart, JavaScript
 
     Liam Aga
-    Email:
-    Availability (weekly):
-    Computing Platforms:
-    Languages:
+    Email: aga.liam@ku.edu
+    Availability (weekly): MWF: 12pm-9pm, TTh: 4pm-9pm
+    Computing Platforms: Windows, Linux 
+    Languages: Python, C, C++, Lua
 
     Sam Kelemen
     Email: samkelemen@ku.edu
