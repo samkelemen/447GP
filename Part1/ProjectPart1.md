@@ -49,10 +49,10 @@ The Library Management system will aim to implement a database that can handle v
 
 ### Daniel Bobadilla
 
-- **Email:** debobadilla2002@ku.edu
-- **Availability (weekly):**
-- **Computing Platforms:**
-- **Languages:**
+- **Email:** d163b158@ku.edu
+- **Availability (weekly):** WedTueThu 4 - 6 PM
+- **Computing Platforms:** MacOS, Linux
+- **Languages:** Python, C, C++, JavaScript
 
 ### Jorge Trujillo
 
