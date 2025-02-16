@@ -46,10 +46,10 @@ Team Profiles ------------------
     Languages:
 
     Jack Pigott
-    Email: 
-    Availability (weekly):
-    Computing Platforms:
-    Languages:
+    Email: jcpigott15@ku.edu
+    Availability (weekly): MWF: 4:00 PM - 8: PM; TuTh: 2:30 - 10 PM
+    Computing Platforms: Windows, Linux
+    Languages: Python, C, C++, JavaScript, Racket
 
     Jorge Trujillo
     Email: jorge.trujillo@ku.edu
