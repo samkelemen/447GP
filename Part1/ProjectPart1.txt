@@ -1,23 +1,36 @@
-Vision Statement
+Vision Statement ------------------
 
-We are developing a library databse to allow a library to track 
-all the essential functions of a library. A few of these functions include
-storing library property, including books and magazines, and their 
-associated information, as well as keeping track of library members of 
-various categories and their borrowing activity, including any fines or fees.
+We are developing a library databse to allow a library to track all the essential functions of a library. A few of these functions include storing library property, including books and magazines, and their associated information, as well as keeping track of library members of various categories and their borrowing activity, including any fines or fees.
 
-Scope Statement
+Scope Statement ------------------
 
-Scope statement here.
+Project Justification - The Library Management system will aim to implement a database that can handle various tasks such as track membership types, manage a diverse collection of items, enforce borrowing rules, and generate reports. The database will also have different interfaces depending on if a client or staff is accessing.
 
-Team Roles
+Project Objectives -
+    Library Collection
+        - Store and manage books and digital with appropriate attributes such as title, author, ISBN, publication year, genre, and availability status.
+        - Media such as magazines will include title, issue number, publication data and availability status. 
+        - Clients will each have a unique ID, name, contact info, membership type, and account status.
+    Membership and Borrowing
+        - Various forms of membership will be provided, such as regular, student, and senior citizen memberships.  
+        - With each membership status there will be a set borrowing limit and fee structure.
+        - Fees will be assessed for overdue items with rates dependent on membership type.
+    Transactions
+        - All transactions of media will be recorded and maintained.
+        - Borrowed items will have timestamps and the responsible client.
+    Reports
+        - The system will generate reports for book availability and overdue books.
+        - Reports for trends of acquisitions will also be provided.
+        - Client reports will also be generated for fees associated with their accounts.
+
+Team Roles ------------------
     Admin: Sam Kelemen
     Meeting Logger: Aiden Barnard
     Head of Design: Daniel Bobadilla
     Tech Coordinator: Jorge Trujillo
     Lead Dev: Liam Aga
 
-Team Profiles
+Team Profiles ------------------
 
     Aiden Barnard
     Email: 
