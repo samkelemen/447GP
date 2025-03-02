@@ -34,7 +34,67 @@ The following numbered sections define who is the target audience for the databa
 
 ## Functional Requirements 
 
-{{{{Delete this later: Functional Requirements: Specify the essential functions the database must perform. These functions can include user administration, data entry, retrieval, updates, deletions, and report generation. For report generation, refer to the sample queries/reports provided at the end of the project description for ideas. Additionally, as a team, brainstorm and propose other types of queries/reports that might be of interest to users. }}}}
+Will edit later. Copy and pasted from project description:
+
+• List all books by a specific author: Display all books in the library collection written by a
+particular author.
+
+• Find books by publication year: Retrieve a list of books published in a specific year.
+
+• Check membership status: Display the current status and account information for a specific
+client based on their unique ID.
+
+• Fine calculation: Calculate the total fines owed by each member, considering overdue books
+and a daily fine rate (e.g., $0.25 per day).
+
+• Book availability: Display a list of all available books (not currently borrowed) within a
+specific genre.
+
+• Frequent borrowers of a specific genre: Identify the members who have borrowed the
+most books in a particular genre (e.g., "Mystery") in the last year.
+
+• Books due soon: Generate a report of all books due within the next week, sorted by due date.
+
+• Members with overdue books: List all members who currently have at least one overdue
+book, along with the titles of the overdue books.
+
+• Average borrowing time: Calculate the average number of days members borrow books for
+a specific genre.
+
+• Most popular author in the last month: Determine the author whose books have been
+borrowed the most in the last month.
+
+• Monthly fees report: Generate a report of total fees collected within the last month, broken
+down by membership type.
+
+• Exceeded borrowing limits: Produce a list of clients who have exceeded their borrowing
+limits.
+
+• Frequent borrowed items by client type: Determine the most frequently borrowed items
+by each client type.
+
+• Never late returns: Find out which clients have never returned an item late.
+
+• Average loan duration: Calculate the average time an item stays on loan before being
+returned.
+
+• Monthly summary report: Generate a report summarizing the total number of items loaned,
+total fees collected, and most popular items for the month.
+
+• Statistics breakdown: Breakdown the statistics by client type and item category (books,
+digital media, magazines).
+
+• Client borrowing report: Produce an individual report for each client showing their
+borrowing history, outstanding fees, and any reserved items.
+
+• Item availability and history: List all items, their current availability status, and their last
+borrowed date. Highlight items that have not been borrowed in the past six months.
+
+• Overdue items report: Generate a report listing all overdue items, the client responsible, and
+the calculated late fees.
+
+• Revenue summary: Summarize the library’s revenue from fees, showing the breakdown by
+membership type and item category
 
 ## Data Entities
 
