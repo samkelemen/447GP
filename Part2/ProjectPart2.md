@@ -22,7 +22,7 @@ DB              ->  An acronym for database.
 The following numbered sections define who is the target audience for the database system (in no particular order).
 
 1. End-Users
-  * Employees - Individuals who are appointed by the owner or manager of the library or business to interact with the database. May also be described as internal users. 
+  \tab* Employees - Individuals who are appointed by the owner or manager of the library or business to interact with the database. May also be described as internal users. 
 
 2. Database Administrators
   * This may be anyone with experience in database management system that may be contracted by the library or business to manage a copy of the DB management system developed by The Librarians.
