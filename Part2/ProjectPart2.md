@@ -67,8 +67,8 @@ Generate the following reports:
   &nbsp;(3.) Statistics breakdown: Breakdown the statistics by client type and item category (books, digital media, magazines)  
   &nbsp;(4.) Revenue summary: Summarize the library’s revenue from fees, showing the breakdown by membership type and item category  
 
-Generate the following elaborate report:  
-&nbsp;{{{{{{INCLUDE DESCRIPTION HERE!!}}}}}}}}}}}  
+Generate a report that provides a comprehensive analysis of the library's book collection, examining the distribution of books by genre, identifying trends in acquisition over the past 5 years, and assessing the age of the collection to identify outdated materials. The report will highlight books with borrowing and return rates and identify under-represented genres or authors for their frequency of borrowing.
+
 ## Data Entities
 
 {{{{Delete this later: Data Entities: List and describe the main data entities and their attributes and their data types or constraints. Note: these should represent major entities and their attributes (see the project description as the starting point); the list may be expanded upon when you develop the conceptual model.}}}}
