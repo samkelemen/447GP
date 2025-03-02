@@ -34,13 +34,11 @@ The following numbered sections define who is the target audience for the databa
 
 ## Functional Requirements 
 
-{{{{Delete this later: Functional Requirements: Specify the essential functions the database must perform. These functions can include user administration, data entry, retrieval, updates, deletions, and report generation. For report generation, refer to the sample queries/reports provided at the end of the project description for ideas. Additionally, as a team, brainstorm and propose other types of queries/reports that might be of interest to users. Data Entities: List and describe the main data entities and their attributes and their data types or constraints. Note: these should represent major entities and their attributes (see the project description as the starting point); the list may be expanded upon when you develop the conceptual model.
-
-Optional: Non-Functional Requirements: Include performance metrics, security requirements, and any other constraints like compliance with regulations. You will not be expected to show that the non-functional properties hold. }}}}
+{{{{Delete this later: Functional Requirements: Specify the essential functions the database must perform. These functions can include user administration, data entry, retrieval, updates, deletions, and report generation. For report generation, refer to the sample queries/reports provided at the end of the project description for ideas. Additionally, as a team, brainstorm and propose other types of queries/reports that might be of interest to users. }}}}
 
 ## Data Entities
 
-
+{{{{Delete this later: Data Entities: List and describe the main data entities and their attributes and their data types or constraints. Note: these should represent major entities and their attributes (see the project description as the starting point); the list may be expanded upon when you develop the conceptual model.}}}}
 
 # Hardware and Software Requirements 
 The hardware the team plans to use is the EECS cycle servers at The University of Kansas Campus. As for the software that the team plans to use is MariaDB on the servers mentioned earlier. 
