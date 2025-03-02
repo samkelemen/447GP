@@ -18,17 +18,17 @@ Entries below are defined as (Term) -> (Definition).
 The Librarians  ->  The alias used by the team developing library database system.
 DB              ->  An acronym for database. 
 
-# Stakeholders
+# Stakeholders  
 The following numbered sections define who is the target audience for the database system (in no particular order).
 
-1. End-Users
-  \t* Employees - Individuals who are appointed by the owner or manager of the library or business to interact with the database. May also be described as internal users. 
+1. End-Users  
+  &nbsp; Employees - Individuals who are appointed by the owner or manager of the library or business to interact with the database. May also be described as internal users. 
 
-2. Database Administrators
-  * This may be anyone with experience in database management system that may be contracted by the library or business to manage a copy of the DB management system developed by The Librarians.
+2. Database Administrators  
+ &nbsp; This may be anyone with experience in database management system that may be contracted by the library or business to manage a copy of the DB management system developed by The Librarians.
 
-3. Library/Business Executives 
-  * This is anyone of an executive position in the business or library that may want to access information or data in the DB in order to make any decisions or changes to their system.
+3. Library/Business Executives   
+  &nbsp; This is anyone of an executive position in the business or library that may want to access information or data in the DB in order to make any decisions or changes to their system.
 
 # Requirements
 
