@@ -151,6 +151,8 @@ Below are the primary entities in the library database system along with their a
 - **Programming Languages:** SQL (for database queries and scripts).
 - **User Authentication:** Implement basic user authentication for client and staff access.
 
+- *May design a user interface for Library Staff and/or Clients roles*
+
 
 
 
