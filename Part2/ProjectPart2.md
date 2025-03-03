@@ -71,7 +71,69 @@ Generate a report that provides a comprehensive analysis of the library's book c
 
 ## Data Entities
 
-{{{{Delete this later: Data Entities: List and describe the main data entities and their attributes and their data types or constraints. Note: these should represent major entities and their attributes (see the project description as the starting point); the list may be expanded upon when you develop the conceptual model.}}}}
+Below are the primary entities in the library database system along with their attributes:
+
+### 1. **Book**
+   - `BookID` (INT, PRIMARY KEY, AUTO_INCREMENT) - Unique identifier for each book.
+   - `Title` (VARCHAR) - Title of the book.
+   - `Author` (VARCHAR) - Author(s) of the book.
+   - `ISBN` (VARCHAR, UNIQUE) - Unique ISBN number.
+   - `PublicationYear` (YEAR) - Year of publication.
+   - `Genre` (VARCHAR) - Genre/category of the book.
+   - `AvailabilityStatus` (ENUM) - Status (Available, Checked Out, Reserved).
+
+### 2. **DigitalMedia**
+   - `MediaID` (INT, PRIMARY KEY, AUTO_INCREMENT) - Unique identifier for each digital media item.
+   - `Title` (VARCHAR) - Title of the media.
+   - `Creator` (VARCHAR) - Creator/Author of the media.
+   - `PublicationYear` (YEAR) - Year of publication.
+   - `Format` (VARCHAR) - Type (e.g., eBook, Audiobook).
+   - `AvailabilityStatus` (ENUM) - Status (Available, Checked Out, Reserved).
+
+### 3. **Magazine**
+   - `MagazineID` (INT, PRIMARY KEY, AUTO_INCREMENT) - Unique identifier for each magazine.
+   - `Title` (VARCHAR) - Title of the magazine.
+   - `IssueNumber` (VARCHAR) - Issue number.
+   - `PublicationDate` (DATE) - Date of publication.
+   - `AvailabilityStatus` (ENUM) - Status (Available, Checked Out, Reserved).
+
+### 4. **Client**
+   - `ClientID` (INT, PRIMARY KEY, AUTO_INCREMENT) - Unique identifier for each client.
+   - `Name` (VARCHAR) - Full name of the client.
+   - `ContactInfo` (VARCHAR) - Email or phone number.
+   - `MembershipType` (ENUM) - Type of membership (Regular, Student, Senior, etc.).
+   - `AccountStatus` (ENUM) - Active, Suspended, or Inactive.
+
+### 5. **MembershipType**
+   - `MembershipType` (ENUM, PRIMARY KEY) - Defines the type of membership.
+   - `BorrowingLimit` (INT) - Maximum number of items that can be borrowed.
+   - `LateFeeRate` (DECIMAL) - Fee charged per day for overdue items.
+
+### 6. **Transaction**
+   - `TransactionID` (INT, PRIMARY KEY, AUTO_INCREMENT) - Unique transaction identifier.
+   - `ClientID` (INT, FOREIGN KEY) - The client borrowing/returning the item.
+   - `ItemID` (INT, FOREIGN KEY) - References `BookID`, `MediaID`, or `MagazineID`.
+   - `ItemType` (ENUM) - Identifies whether it's a book, digital media, or magazine.
+   - `CheckoutDate` (DATETIME) - Timestamp when the item was checked out.
+   - `DueDate` (DATETIME) - Due date for return.
+   - `ReturnDate` (DATETIME, NULLABLE) - Timestamp when the item was returned.
+   - `LateFee` (DECIMAL, NULLABLE) - Fee charged if returned late.
+
+### 7. **Reservation**
+   - `ReservationID` (INT, PRIMARY KEY, AUTO_INCREMENT) - Unique identifier for each reservation.
+   - `ClientID` (INT, FOREIGN KEY) - The client reserving the item.
+   - `ItemID` (INT, FOREIGN KEY) - References `BookID`, `MediaID`, or `MagazineID`.
+   - `ItemType` (ENUM) - Identifies whether it's a book, digital media, or magazine.
+   - `ReservationDate` (DATETIME) - When the reservation was made.
+   - `Status` (ENUM) - Pending, Fulfilled, or Cancelled.
+
+### 8. **Notification**
+   - `NotificationID` (INT, PRIMARY KEY, AUTO_INCREMENT) - Unique identifier for each notification.
+   - `ClientID` (INT, FOREIGN KEY) - The client receiving the notification.
+   - `Type` (ENUM) - Due Date Reminder, Overdue Notice, Reservation Available.
+   - `Message` (TEXT) - Notification content.
+   - `SentDate` (DATETIME) - When the notification was sent.
+
 
 # Hardware and Software Requirements 
 The hardware the team plans to use is the EECS cycle servers at The University of Kansas Campus. As for the software that the team plans to use is MariaDB on the servers mentioned earlier. 
