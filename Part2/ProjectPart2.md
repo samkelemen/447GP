@@ -142,7 +142,6 @@ Below are the primary entities in the library database system along with their a
 - **Minimum Storage Requirements:** Estimated disk space requirement of at least 10GB for initial deployment.
 - **Memory Requirements:** 8GB RAM recommended.
 - **Processor Requirements:** Core i3 or equivalent
-- **Backup & Redundancy:** Define backup storage method and frequency.
 - **Internet Specificatins:** Ethernet IEEE 802.3 recommended for optimal speeds and stable connection
 
 ### 2. **Software Requirements**
