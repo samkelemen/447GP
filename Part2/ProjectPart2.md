@@ -136,7 +136,18 @@ Below are the primary entities in the library database system along with their a
 
 
 # Hardware and Software Requirements 
-The hardware the team plans to use is the EECS cycle servers at The University of Kansas Campus. As for the software that the team plans to use is MariaDB on the servers mentioned earlier. 
+
+### 1. **Hardware Requirements**
+- **Servers:** EECS cycle servers at The University of Kansas Campus.
+- **Minimum Storage Requirements:** Estimated disk space requirement of at least 10GB for initial deployment.
+- **Memory Requirements:** Minimum recommended RAM for optimal database performance.
+- **Backup & Redundancy:** Define backup storage method and frequency.
+
+### 2. **Software Requirements**
+- **Database Management System (DBMS):** MariaDB (latest stable version).
+- **Operating System:** Linux (running on EECS cycle servers).
+- **Programming Languages:** SQL (for database queries and scripts).
+- **User Authentication:** Implement basic user authentication for client and staff access.
 
 
 
