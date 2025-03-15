@@ -1,0 +1,87 @@
+(Attribute types subject to change...)
+
+Book Entity Attributes
+
+| Attribute Name      | Data Type       | Constraints                                      | Attribute Type  |
+|---------------------|----------------|---------------------------------------------------|-----------------|
+| BookID             | INT            | PRIMARY KEY, NOT NULL, AUTO_INCREMENT              | Primary Key     |
+| Title              | VARCHAR(255)   | NOT NULL                                           | Normal          |
+| Author             | VARCHAR(255)   | NOT NULL                                           | Normal          |
+| ISBN               | VARCHAR(20)    | UNIQUE, NOT NULL                                   | Normal          |
+| PublicationYear    | INT            | CHECK (PublicationYear > 0)                        | Normal          |
+| Genre              | VARCHAR(100)   | NOT NULL                                           | Normal          |
+| AvailabilityStatus | ENUM           | ('Available', 'Checked Out', 'Reserved'), DEFAULT 'Available' | Normal |
+
+Digital Media Entity Attributes
+
+| Attribute Name      | Data Type       | Constraints                                      | Attribute Type  |
+|-------------------- |----------------|---------------------------------------------------|-----------------|
+| MediaID            | INT            | PRIMARY KEY, AUTO_INCREMENT                        | Primary Key     |
+| Title              | VARCHAR(255)   | NOT NULL                                           | Normal          |
+| Creator            | VARCHAR(255)   | NOT NULL                                           | Normal          |
+| PublicationYear    | YEAR           | CHECK (PublicationYear >= 1000)                    | Normal          |
+| Format             | VARCHAR(255)   | NOT NULL                                           | Normal          |
+| AvailabilityStatus | ENUM           | ('Available', 'Checked Out', 'Reserved'), DEFAULT 'Available' | Normal |
+
+Magazine Entity Attributes
+
+| Attribute Name      | Data Type       | Constraints                                      | Attribute Type  |
+|---------------------|----------------|---------------------------------------------------|-----------------|
+| MagazineID         | INT            | PRIMARY KEY, AUTO_INCREMENT                        | Primary Key     |
+| Title              | VARCHAR(255)   | NOT NULL                                           | Normal          |
+| IssueNumber        | VARCHAR(50)    | NOT NULL                                           | Normal          |
+| PublicationDate    | DATE           | NOT NULL                                           | Normal          |
+| AvailabilityStatus | ENUM           | ('Available', 'Checked Out', 'Reserved'), DEFAULT 'Available' | Normal |
+
+Client Entity Attributes
+
+| Attribute Name      | Data Type       | Constraints                                      | Attribute Type  |
+|---------------------|----------------|---------------------------------------------------|-----------------|
+| ClientID           | INT            | PRIMARY KEY, AUTO_INCREMENT                        | Primary Key     |
+| Name               | VARCHAR(255)   | NOT NULL                                           | Normal          |
+| ContactInfo        | VARCHAR(255)   | NOT NULL                                           | Normal          |
+| MembershipType     | ENUM           | ('Regular', 'Student', 'Senior')                   | Foreign Key     |
+| AccountStatus      | ENUM           | ('Active', 'Suspended', 'Inactive'), DEFAULT 'Active' | Normal |
+
+MembershipType Entity Attributes
+
+| Attribute Name      | Data Type      | Constraints                                       | Attribute Type  |
+|---------------------|----------------|---------------------------------------------------|-----------------|
+| MembershipType     | VARCHAR(50),ENUM| PRIMARY KEY                                        | Primary Key     |
+| BorrowingLimit     | INT            | NOT NULL, CHECK (BorrowingLimit >= 0)              | Normal          |
+| LateFeeRate        | DECIMAL(5,2)   | NOT NULL, CHECK (LateFeeRate >= 0.00)              | Normal          |
+
+Transaction Entity Attributes
+
+| Attribute Name      | Data Type       | Constraints                                      | Attribute Type  |
+|---------------------|----------------|---------------------------------------------------|-----------------|
+| TransactionID     | INT            | PRIMARY KEY, AUTO_INCREMENT                        | Primary Key     |
+| ClientID          | INT            | FOREIGN KEY REFERENCES Client(ClientID)            | Foreign Key     |
+| ItemID            | INT            | FOREIGN KEY REFERENCES BookID,MediaID,or MagazineID| Foreign Key     |
+| ItemType          | ENUM           | ('Book', 'DigitalMedia', 'Magazine')               | Normal          |
+| CheckoutDate      | DATETIME       | NOT NULL                                           | Normal          |
+| DueDate           | DATETIME       | NOT NULL                                           | Normal          |
+| ReturnDate        | DATETIME       | NULLABLE                                           | Normal          |
+| LateFee           | DECIMAL(5,2)   | NULLABLE, CHECK (LateFee >= 0)                     | Derived         |
+
+Reservation Entity Attributes
+
+| Attribute Name      | Data Type       | Constraints                                       | Attribute Type  |
+|---------------------|----------------|---------------------------------------------------|-----------------|
+| ReservationID      | INT            | PRIMARY KEY, AUTO_INCREMENT                       | Primary Key     |
+| ClientID          | INT            | FOREIGN KEY REFERENCES Client(ClientID)            | Foreign Key     |
+| ItemID            | INT            | FOREIGN KEY REFERENCES BookID, MediaID, MagazineID | Foreign Key     |
+| ItemType          | ENUM           | ('Book', 'Digital Media', 'Magazine')              | Normal          |
+| ReservationDate   | DATETIME       | NOT NULL                                           | Normal          |
+| Status           | ENUM           | ('Pending', 'Fulfilled', 'Cancelled')              | Normal          |
+
+Notification Entity Attributes
+
+| Attribute Name      | Data Type       | Constraints                                      | Attribute Type  |
+|---------------------|----------------|---------------------------------------------------|-----------------|
+| NotificationID     | INT            | PRIMARY KEY, AUTO_INCREMENT                       | Primary Key     |
+| ClientID          | INT            | FOREIGN KEY REFERENCES Client(ClientID)            | Foreign Key     |
+| Type              | ENUM           | ('Due Date Reminder', 'Overdue Notice', 'Reservation Available') | Normal |
+| Message           | TEXT           | NOT NULL                                           | Normal          |
+| SentDate          | DATETIME       | NOT NULL                                           | Normal          |
+
