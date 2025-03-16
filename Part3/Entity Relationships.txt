@@ -1,0 +1,127 @@
+﻿Entity Relationships
+
+
+
+1. Transaction (Borrowing) Relationship
+* Entities Involved:
+
+   * Client/Member
+   * Transaction
+   * Library Item (Book, Digital Media, or Magazine)
+   * Cardinality Notation:
+
+      * Client to Transaction:
+      * A single Client can have many Transactions → (1, N)
+      * Each Transaction is linked to exactly one Client → (1, 1)
+      * Library Item to Transaction:
+      * A single Library Item can appear in many Transactions over time → (1, N)
+      * Each Transaction references exactly one Library Item → (1, 1)
+      * Specialization/Generalization:
+
+         * None
+
+
+2. Reservation Relationship
+         * Entities Involved:
+
+            * Client/Member
+            * Reservation
+            * Library Item
+            * Cardinality Notation:
+
+               * Client to Reservation:
+               * A Client can make many Reservations → (1, N)
+               * Each Reservation is made by exactly one Client → (1, 1)
+               * Library Item to Reservation:
+               * A Library Item can be reserved multiple times (over its lifetime) → (1, N)
+               * Each Reservation is for one specific Library Item → (1, 1)
+               * Specialization/Generalization:
+
+                  * None
+
+
+3. Author–Book Relationship
+                  * Entities Involved:
+
+                     * Author
+                     * Book
+                     * Cardinality Notation:
+
+                        * An Author can write many Books and a Book can have multiple Authors → (M, N)
+ (This is commonly noted as a many-to-many relationship.)
+                           * Specialization/Generalization:
+
+                              * None
+
+
+4. Publisher–Book Relationship
+                              * Entities Involved:
+
+                                 * Publisher
+                                 * Book
+                                 * Cardinality Notation:
+
+                                    * A Publisher can publish many Books → (1, N)
+                                    * Each Book is published by exactly one Publisher → (1, 1)
+                                    * Specialization/Generalization:
+
+                                       * None
+
+
+5. Client–Membership Type Relationship
+                                       * Entities Involved:
+
+                                          * Client/Member
+                                          * Membership Type
+                                          * Cardinality Notation:
+
+                                             * A Membership Type can be assigned to many Clients → (1, N)
+                                             * Each Client has exactly one Membership Type → (1, 1)
+                                             * Specialization/Generalization:
+
+                                                * None
+
+
+6. Employee–Transaction Relationship (if applicable)
+                                                * Entities Involved:
+
+                                                   * Employee
+                                                   * Transaction
+                                                   * Cardinality Notation:
+
+                                                      * An Employee can process many Transactions → (1, N)
+                                                      * Each Transaction is processed by exactly one Employee → (1, 1)
+                                                      * Specialization/Generalization:
+
+                                                         * None
+
+
+7. Client–Notification Relationship
+                                                         * Entities Involved:
+
+                                                            * Client/Member
+                                                            * Notification
+                                                            * Cardinality Notation:
+
+                                                               * A Client may receive many Notifications → (1, N)
+                                                               * Each Notification is sent to exactly one Client → (1, 1)
+                                                               * Specialization/Generalization:
+                                                               * None
+
+
+8. Fine/Fee Relationship (Optional)
+                                                               * Entities Involved:
+
+                                                                  * Fine/Fee
+                                                                  * Transaction and/or Client
+                                                                  * Cardinality Notation:
+
+                                                                     * Transaction to Fine/Fee:
+                                                                     * A Transaction may incur zero or one Fine/Fee → (1, 0..1)
+                                                                     * Each Fine/Fee is associated with exactly one Transaction → (1, 1)
+                                                                     * Client to Fine/Fee:
+                                                                     * A Client can incur many Fines/Fees over time → (1, N)
+                                                                     * Each Fine/Fee is linked to one Client → (1, 1)
+                                                                     * Specialization/Generalization:
+
+                                                                        * None
