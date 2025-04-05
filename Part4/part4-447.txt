@@ -1,0 +1,180 @@
+﻿Relational Schema Mapping – Part 2  
+
+
+-------------------------------
+1. Identify Relations
+-------------------------------
+
+
+-- Item --
+Item(
+    ItemID [PK]
+)
+
+
+-- Book --
+Book(
+    ItemID [PK, FK → Item],
+    Genre,
+    ISBN,
+    PublicationDate,
+    Title,
+    CopiesAvailable
+)
+
+
+-- DigitalMedia --
+DigitalMedia(
+    ItemID [PK, FK → Item],
+    MediaID,
+    Format,
+    PublicationDate,
+    Title,
+    CopiesAvailable
+)
+
+
+-- Magazine --
+Magazine(
+    ItemID [PK, FK → Item],
+    MagazineID,
+    IssueNumber,
+    PublicationDate,
+    Title,
+    CopiesAvailable
+)
+
+
+-- Client --
+Client(
+    ClientID [PK],
+    Email,
+    Name,
+    AccountStatus
+)
+
+
+-- Author --
+Author(
+    AuthorID [PK],
+    Name
+)
+
+
+-- Publisher --
+Publisher(
+    PublisherID [PK],
+    Name
+)
+
+
+-- Notification --
+Notification(
+    NotificationID [PK],
+    SendDate,
+    Message,
+    ClientID [FK → Client]
+)
+
+
+-- Transaction --
+Transaction(
+    TransactionID [PK],
+    ItemID [FK → Item],
+    ClientID [FK → Client],
+    LateFee,
+    DueDate,
+    CheckoutDate
+)
+
+
+-- Reservation --
+Reservation(
+    ReservationID [PK],
+    Status,
+    ReservationDate,
+    ItemID [FK → Item],
+    ClientID [FK → Client]
+)
+
+
+-- Membership --
+Membership(
+    MembershipType [PK],
+    BorrowingLimit,
+    LateFee
+)
+
+
+-- Creates --
+Creates(
+    ItemID [PK, FK → Item],
+    AuthorID [PK, FK → Author]
+)
+
+
+-- Publishes --
+Publishes(
+    ItemID [PK, FK → Item],
+    PublisherID [PK, FK → Publisher]
+)
+
+
+
+
+-------------------------------
+2. Functional Dependencies
+-------------------------------
+
+
+Item:
+    ItemID → {}
+
+
+Book:
+    ItemID → {Genre, ISBN, PublicationDate, Title, CopiesAvailable}
+    ISBN → Title
+
+
+DigitalMedia:
+    ItemID → {MediaID, Format, PublicationDate, Title, CopiesAvailable}
+
+
+Magazine:
+    ItemID → {MagazineID, IssueNumber, PublicationDate, Title, CopiesAvailable}
+
+
+Client:
+    ClientID → {Email, Name, AccountStatus}
+
+
+Author:
+    AuthorID → Name
+
+
+Publisher:
+    PublisherID → Name
+
+
+Notification:
+    NotificationID → {SendDate, Message, ClientID}
+
+
+Transaction:
+    TransactionID → {ItemID, ClientID, LateFee, DueDate, CheckoutDate, ReturnDate}
+
+
+Reservation:
+    ReservationID → {Status, ReservationDate, ItemID, ClientID}
+
+
+Membership:
+    MembershipType → {BorrowingLimit, LateFee}
+
+
+Creates:
+    {ItemID, AuthorID} → {}
+
+
+Publishes:
+    {ItemID, PublisherID} → {}
