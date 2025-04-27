@@ -1,15 +1,53 @@
+-- Membership
+SELECT 'Membership'   AS TableName;
 SELECT * FROM Membership;
+
+-- Client
+SELECT 'Client'       AS TableName;
 SELECT * FROM Client;
+
+-- Item
+SELECT 'Item'         AS TableName;
 SELECT * FROM Item;
+
+-- Book
+SELECT 'Book'         AS TableName;
 SELECT * FROM Book;
+
+-- DigitalMedia
+SELECT 'DigitalMedia' AS TableName;
 SELECT * FROM DigitalMedia;
+
+-- Magazine
+SELECT 'Magazine'     AS TableName;
 SELECT * FROM Magazine;
+
+-- Author
+SELECT 'Author'       AS TableName;
 SELECT * FROM Author;
+
+-- Publisher
+SELECT 'Publisher'    AS TableName;
 SELECT * FROM Publisher;
+
+-- Creates
+SELECT 'Creates'      AS TableName;
 SELECT * FROM Creates;
+
+-- Publishes
+SELECT 'Publishes'    AS TableName;
 SELECT * FROM Publishes;
+
+-- Notification
+SELECT 'Notification' AS TableName;
 SELECT * FROM Notification;
+
+-- Transaction
+SELECT 'Transaction'  AS TableName;
 SELECT * FROM `Transaction`;
+
+-- Reservation
+SELECT 'Reservation'  AS TableName;
 SELECT * FROM Reservation;
 
 -- Usage:
