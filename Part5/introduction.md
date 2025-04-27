@@ -1,0 +1,3 @@
+<!-- 
+Project Overview: Briefly reiterate the purpose and main functionalities of your database, maintaining consistency with your previous project parts. Scope: Re-emphasize the boundaries of your project, clarifying included and excluded data and functionalities. Glossary: Update your glossary with any new terms or concepts relevant to relational database design. The introduction section is for continuity; the italic parts are subsections.
+ -->
