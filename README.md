@@ -9,3 +9,6 @@ Meeting log located in the Part3/meetinglog3.pdf file
 
 Project Part 4: Logical Relational Model.
 Meeting log located in the Part4/meetinglog4.pdf file
+
+Project Part 5: Physical Database Design.
+Meeting log located in the Part5/meetinglog5.pdf file
