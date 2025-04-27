@@ -8,6 +8,9 @@ The purpose of this database is to provide a comprehensive solution for librarie
 <!-- Scope -->
 The database will include features for managing library collections, client memberships, borrowing and reservation activities, and generating various reports. It will not cover advanced user interfaces, recommendation systems, or external integrations. The focus is on providing a robust backend system that ensures data accuracy and operational efficiency.
 
+<!-- Choose Your Platform -->
+We have chosen MariaDB as the database platform for this project due to its user-friendly nature, seamless integration with Cycle Servers, and prior experience with the system. In EECS 348 (Software Engineering I), one of the later lab assignments involved working with MariaDB, making it a familiar and practical choice. Additionally, hosting the database on KU's Cycle Server infrastructure eliminates the need for dedicated hardware, providing a reliable and cost-effective solution. MariaDB also benefits from strong community support and regular updates, ensuring both reliability and security. While MariaDB meets the requirements of this application, it is worth noting that it lacks some advanced features available in enterprise-grade databases like Oracle or SQL Server.
+
 <!-- Glossary -->
 - **DB:** Acronym for Database.
 - **Library Item:** Refers to books, digital media, or magazines managed by the system.
