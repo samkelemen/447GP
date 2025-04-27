@@ -1,5 +1,5 @@
 -- Membership
-SELECT 'Membership'   AS TableName;
+SELECT 'Membership'   AS TableName; -- This is the closest thing I could get to a print statement for each table name
 SELECT * FROM Membership;
 
 -- Client
