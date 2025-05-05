@@ -20,12 +20,36 @@ Below we have provided some queries to run in our database. Each query has a des
 
 # List all books by a specific author
 ```SQL
-Enter your sql code like this
+-- Replace 'Author Name' with the desired author
+SELECT b.Title, b.ISBN, b.PublicationDate
+FROM Book AS b
+JOIN Creates AS c ON b.ItemID = c.ItemID
+JOIN Author AS a ON c.AuthorID = a.AuthorID
+WHERE a.Name = 'Author Name';
 ```
 
 # Find books by publication year
+```SQL
+-- Replace 2023 with the desired publication year
+SELECT b.Title, b.ISBN, b.PublicationDate
+FROM Book AS b
+WHERE YEAR(b.PublicationDate) = 2023;
+```
 
 # Check membership status for a specific client
+```SQL
+-- Replace 'ClientID' with the desired client ID
+SELECT c.ClientID,
+       c.Name,
+       c.AccountStatus,
+       c.MembershipType,
+       m.BorrowingLimit,
+       m.LateFee
+FROM Client AS c
+LEFT JOIN Membership AS m
+  ON c.MembershipType = m.MembershipType
+WHERE c.ClientID = 'ClientID';
+```
 
 # Book availability
 
