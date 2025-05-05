@@ -5,14 +5,16 @@ To connect to our database, first log in to one of the cycle servers.
 Then enter the following Bash script:
 
 ```bash
-mysql -h mysql.eecs.ku.edu -u userID -p
+mysql -h mysql.eecs.ku.edu -u 447s25_a542b289 -p
 ```
 
 ## Credentials:
 
-**Username**: `447s25_a542b289`
-
 **Password**: `haehaiN3`
+
+## Enter our DB
+
+`Use 447s25_a542b289`
 
 ## Queries:
 
