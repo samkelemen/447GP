@@ -10,8 +10,9 @@ mysql -h mysql.eecs.ku.edu -u userID -p
 
 ## Credentials:
 
-**Username**: 447s25_a542b289
-**Password**: haehaiN3
+**Username**: `447s25_a542b289`
+
+**Password**: `haehaiN3`
 
 ## Queries:
 
