@@ -156,6 +156,7 @@ ORDER BY TimesBorrowed DESC;
 <!-- Liam -->
 
 # Most popular author in the last month
+```SQL
 -- Finds the author whose books were borrowed the most times in the past month.
 SELECT 
   a.AuthorID,
@@ -171,6 +172,7 @@ ORDER BY TimesBorrowed DESC
 LIMIT 1;
 
 # Exceeded borrowing limits
+```SQL
 --Lists clients who have more current checkouts than their membership allows
 SELECT 
   c.ClientID,
