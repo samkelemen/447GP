@@ -200,7 +200,7 @@ More report ideas are in canvas -> databases -> files -> project
 Below we have provided two report queries for our database. These reports have a description of what it does followed by the code to run
 
 # Detect books with zero borrows
-'''SQL
+```SQL
 SELECT
   b.ItemID,
   b.Title,
@@ -213,9 +213,9 @@ LEFT JOIN
   ON b.ItemID = t.ItemID
 WHERE
   t.TransactionID IS NULL;
-'''
+```
 # Calculate average book age
-'''SQL
+```SQL
 -- 2. Calculate average book age (in years, to two decimal places)
 SELECT
   ROUND(
@@ -226,5 +226,5 @@ SELECT
   ) AS AverageBookAgeYears
 FROM
   Book;
-'''
+```
 
