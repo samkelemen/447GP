@@ -202,6 +202,7 @@ Below we have provided two report queries for our database. These reports have a
 
 ##  Detect books with zero borrows
 ```SQL
+-- 1. Detect books with zero borrows
 SELECT
   b.ItemID,
   b.Title,
