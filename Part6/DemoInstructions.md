@@ -1,4 +1,4 @@
-## Demo Instructions
+# Demo Instructions
 
 To connect to our database, first log in to one of the cycle servers.
 
@@ -16,13 +16,13 @@ mysql -h mysql.eecs.ku.edu -u 447s25_a542b289 -p
 
 `Use 447s25_a542b289`
 
-## Queries:
+# Queries:
 
 Below we have provided some queries to run in our database. Each query has a description of what it does followed by the code to run
 
 <!-- Aiden -->
 
-# List all books by a specific author
+##  List all books by a specific author
 ```SQL
 -- Replace 'Donald Knuth' with the desired author
 SELECT b.Title, b.ISBN, b.PublicationDate
@@ -32,7 +32,7 @@ JOIN Author AS a ON c.AuthorID = a.AuthorID
 WHERE a.Name = 'Donald Knuth';
 ```
 
-# Find books by publication year
+##  Find books by publication year
 ```SQL
 -- Replace 2023 with the desired publication year
 SELECT b.Title, b.ISBN, b.PublicationDate
@@ -40,7 +40,7 @@ FROM Book AS b
 WHERE YEAR(b.PublicationDate) = 2020;
 ```
 
-# Check membership status for a specific client
+##  Check membership status for a specific client
 ```SQL
 -- Replace 'ClientID' with the desired client ID
 SELECT c.ClientID,
@@ -57,7 +57,7 @@ WHERE c.ClientID = 'ClientID';
 
 <!-- Daniel -->
 
-# Book availability
+##  Book availability
 ```SQL
 -- List each book and how many copies are currently available
 SELECT 
@@ -67,7 +67,7 @@ SELECT
 FROM Book AS b;
 ```
 
-# Books due soon
+##  Books due soon
 ```SQL
 -- Show checkouts due in the next 7 days that haven’t been returned
 SELECT 
@@ -84,7 +84,7 @@ WHERE t.ReturnDate IS NULL
                     AND DATE_ADD(CURDATE(), INTERVAL 7 DAY);
 ```
 
-# Fine calculation for overdue books
+##  Fine calculation for overdue books
 ```SQL
 -- Calculate accrued fines for all currently overdue items
 SELECT 
@@ -106,7 +106,7 @@ WHERE t.ReturnDate IS NULL
 
 <!-- Jack -->
 
-# Members with overdue books and related titles
+##  Members with overdue books and related titles
 ```SQL
 -- This lists clients with unreturned books whose due dates have already passed, including the book titles and due dates.
 SELECT 
@@ -122,7 +122,7 @@ WHERE t.ReturnDate IS NULL
 ```
 
 
-# Never-late clients
+##  Never-late clients
 ```SQL
 -- This selects clients who have never had an overdue transaction (either currently overdue or at the time of return, depending on how you'd track late returns).
 SELECT 
@@ -138,7 +138,7 @@ WHERE NOT EXISTS (
 );
 ```
 
-# Frequent borrowers of a specific genre
+##  Frequent borrowers of a specific genre
 ```SQL
 -- This query counts how many times each client has borrowed a book of a specific genre. You can change 'Fantasy' to any genre you want to analyze.
 SELECT 
@@ -155,7 +155,7 @@ ORDER BY TimesBorrowed DESC;
 
 <!-- Liam -->
 
-# Most popular author in a given time frame (in months)
+##  Most popular author in a given time frame (in months)
 ```SQL
 -- Finds the author whose books were borrowed the most times in the past 48 months.
 -- Feel free to change the 48 value
@@ -173,7 +173,7 @@ ORDER BY TimesBorrowed DESC
 LIMIT 1;
 ```
 
-# Exceeded borrowing limits
+##  Exceeded borrowing limits
 ```SQL
 --Lists clients who have more current checkouts than their membership allows
 SELECT 
@@ -196,11 +196,11 @@ Sam
 More report ideas are in canvas -> databases -> files -> project
 
 -->
-## Reports:
+# Reports:
 
 Below we have provided two report queries for our database. These reports have a description of what it does followed by the code to run
 
-# Detect books with zero borrows
+##  Detect books with zero borrows
 ```SQL
 SELECT
   b.ItemID,
@@ -215,7 +215,7 @@ LEFT JOIN
 WHERE
   t.TransactionID IS NULL;
 ```
-# Calculate average book age
+##  Calculate average book age
 ```SQL
 -- 2. Calculate average book age (in years, to two decimal places)
 SELECT
