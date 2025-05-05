@@ -172,6 +172,30 @@ More report ideas are in canvas -> databases -> files -> project
 Below we have provided two report queries for our database. These reports have a description of what it does followed by the code to run
 
 # Detect books with zero borrows
+SELECT
+  b.ItemID,
+  b.Title,
+  b.ISBN,
+  b.PublicationDate
+FROM
+  Book AS b
+LEFT JOIN
+  `Transaction` AS t
+  ON b.ItemID = t.ItemID
+WHERE
+  t.TransactionID IS NULL;
 
 # Calculate average book age
+
+-- 2. Calculate average book age (in years, to two decimal places)
+SELECT
+  ROUND(
+    AVG(
+      DATEDIFF(CURDATE(), PublicationDate) / 365.0
+    ),
+    2
+  ) AS AverageBookAgeYears
+FROM
+  Book;
+
 
