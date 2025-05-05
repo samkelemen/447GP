@@ -18,6 +18,9 @@ mysql -h mysql.eecs.ku.edu -u userID -p
 Below we have provided some queries to run in our database. Each query has a description of what it does followed by the code to run
 
 # List all books by a specific author
+```SQL
+Enter your sql code like this
+```
 
 # Find books by publication year
 
