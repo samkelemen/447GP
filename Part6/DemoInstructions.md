@@ -24,12 +24,12 @@ Below we have provided some queries to run in our database. Each query has a des
 
 # List all books by a specific author
 ```SQL
--- Replace 'Author Name' with the desired author
+-- Replace 'Donald Knuth' with the desired author
 SELECT b.Title, b.ISBN, b.PublicationDate
 FROM Book AS b
 JOIN Creates AS c ON b.ItemID = c.ItemID
 JOIN Author AS a ON c.AuthorID = a.AuthorID
-WHERE a.Name = 'Author Name';
+WHERE a.Name = 'Donald Knuth';
 ```
 
 # Find books by publication year
@@ -37,7 +37,7 @@ WHERE a.Name = 'Author Name';
 -- Replace 2023 with the desired publication year
 SELECT b.Title, b.ISBN, b.PublicationDate
 FROM Book AS b
-WHERE YEAR(b.PublicationDate) = 2023;
+WHERE YEAR(b.PublicationDate) = 2020;
 ```
 
 # Check membership status for a specific client
@@ -155,9 +155,10 @@ ORDER BY TimesBorrowed DESC;
 
 <!-- Liam -->
 
-# Most popular author in the last month
+# Most popular author in a given time frame (in months)
 ```SQL
--- Finds the author whose books were borrowed the most times in the past month.
+-- Finds the author whose books were borrowed the most times in the past 48 months.
+-- Feel free to change the 48 value
 SELECT 
   a.AuthorID,
   a.Name AS AuthorName,
@@ -166,7 +167,7 @@ FROM `Transaction` AS t
 JOIN Book AS b ON t.ItemID = b.ItemID
 JOIN Creates AS c ON b.ItemID = c.ItemID
 JOIN Author AS a ON c.AuthorID = a.AuthorID
-WHERE t.CheckoutDate >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH)
+WHERE t.CheckoutDate >= DATE_SUB(CURDATE(), INTERVAL 48 MONTH)
 GROUP BY a.AuthorID, a.Name
 ORDER BY TimesBorrowed DESC
 LIMIT 1;
