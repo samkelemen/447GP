@@ -107,10 +107,51 @@ WHERE t.ReturnDate IS NULL
 <!-- Jack -->
 
 # Members with overdue books and related titles
+```SQL
+-- This lists clients with unreturned books whose due dates have already passed, including the book titles and due dates.
+SELECT 
+  c.ClientID,
+  c.Name,
+  b.Title,
+  t.DueDate
+FROM `Transaction` AS t
+JOIN Client AS c ON t.ClientID = c.ClientID
+JOIN Book AS b ON t.ItemID = b.ItemID
+WHERE t.ReturnDate IS NULL
+  AND t.DueDate < CURDATE();
+```
+
 
 # Never-late clients
+```SQL
+-- This selects clients who have never had an overdue transaction (either currently overdue or at the time of return, depending on how you'd track late returns).
+SELECT 
+  c.ClientID,
+  c.Name
+FROM Client AS c
+WHERE NOT EXISTS (
+  SELECT 1
+  FROM `Transaction` AS t
+  WHERE t.ClientID = c.ClientID
+    AND t.ReturnDate IS NULL
+    AND t.DueDate < CURDATE()
+);
+```
 
 # Frequent borrowers of a specific genre
+```SQL
+-- This query counts how many times each client has borrowed a book of a specific genre. You can change 'Fantasy' to any genre you want to analyze.
+SELECT 
+  c.ClientID,
+  c.Name,
+  COUNT(*) AS TimesBorrowed
+FROM `Transaction` AS t
+JOIN Client AS c ON t.ClientID = c.ClientID
+JOIN Book AS b ON t.ItemID = b.ItemID
+WHERE b.Genre = 'Fantasy'
+GROUP BY c.ClientID, c.Name
+ORDER BY TimesBorrowed DESC;
+```
 
 <!-- Liam -->
 
