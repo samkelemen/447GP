@@ -12,3 +12,6 @@ Meeting log located in the Part4/meetinglog4.pdf file
 
 Project Part 5: Physical Database Design.
 Meeting log located in the Part5/meetinglog5.pdf file
+
+Project Part 6: Demo
+Meeting log located in the Part6/meetinglog6.pdf file
