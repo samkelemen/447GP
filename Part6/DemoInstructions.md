@@ -170,6 +170,7 @@ WHERE t.CheckoutDate >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH)
 GROUP BY a.AuthorID, a.Name
 ORDER BY TimesBorrowed DESC
 LIMIT 1;
+```
 
 # Exceeded borrowing limits
 ```SQL
@@ -185,7 +186,7 @@ JOIN `Transaction` AS t ON c.ClientID = t.ClientID
 WHERE t.ReturnDate IS NULL
 GROUP BY c.ClientID, c.Name, m.BorrowingLimit
 HAVING COUNT(t.TransactionID) > m.BorrowingLimit;
-
+```
 
 <!--
 Jorge
