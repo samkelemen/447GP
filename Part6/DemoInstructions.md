@@ -19,5 +19,13 @@ Below we have provided some queries to run in our database. Each query has a des
 
 # Query 1
 
-
 # Query 2...
+
+## Report:
+
+Below we have provided a report query for our database. This report has a description of what it does followed by the code to run
+
+# Report Description
+
+# Report Query
+
