@@ -156,8 +156,33 @@ ORDER BY TimesBorrowed DESC;
 <!-- Liam -->
 
 # Most popular author in the last month
+-- Finds the author whose books were borrowed the most times in the past month.
+SELECT 
+  a.AuthorID,
+  a.Name AS AuthorName,
+  COUNT(t.TransactionID) AS TimesBorrowed
+FROM `Transaction` AS t
+JOIN Book AS b ON t.ItemID = b.ItemID
+JOIN Creates AS c ON b.ItemID = c.ItemID
+JOIN Author AS a ON c.AuthorID = a.AuthorID
+WHERE t.CheckoutDate >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH)
+GROUP BY a.AuthorID, a.Name
+ORDER BY TimesBorrowed DESC
+LIMIT 1;
 
 # Exceeded borrowing limits
+--Lists clients who have more current checkouts than their membership allows
+SELECT 
+  c.ClientID,
+  c.Name,
+  COUNT(t.TransactionID) AS CurrentlyBorrowed,
+  m.BorrowingLimit
+FROM Client AS c
+JOIN Membership AS m ON c.MembershipType = m.MembershipType
+JOIN `Transaction` AS t ON c.ClientID = t.ClientID
+WHERE t.ReturnDate IS NULL
+GROUP BY c.ClientID, c.Name, m.BorrowingLimit
+HAVING COUNT(t.TransactionID) > m.BorrowingLimit;
 
 
 <!--
