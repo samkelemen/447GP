@@ -49,7 +49,7 @@ INSERT INTO Client (ClientID, Email, Name, AccountStatus, MembershipType) VALUES
   ('c41414141-4141-4141-4141-414141414141','owen@example.com','Owen Gordon','Inactive','VIP'),
   ('c42424242-4242-4242-4242-424242424242','pam@example.com','Pam Franklin','Active','Basic'),
   ('c43434343-4343-4343-4343-434343434343','quincy@example.com','Quincy Rhodes','Active','Premium'),
-  ('c44444444-4444-4444-4444-444444444444','rose@example.com','Rose Bryan','Suspended','VIP'),
+  ('c44444444-4444-4444-4444-444444444445','rose@example.com','Rose Bryan','Suspended','VIP'),
   ('c45454545-4545-4545-4545-454545454545','sam@example.com','Sam Riley','Active','Basic'),
   ('c46464646-4646-4646-4646-464646464646','tara@example.com','Tara Armstrong','Active','Premium'),
   ('c47474747-4747-4747-4747-474747474747','ugo@example.com','Ugo Vaughn','Inactive','VIP'),
