@@ -17,15 +17,45 @@ mysql -h mysql.eecs.ku.edu -u userID -p
 
 Below we have provided some queries to run in our database. Each query has a description of what it does followed by the code to run
 
-# Query 1
+# List all books by a specific author
 
-# Query 2...
+# Find books by publication year
 
-## Report:
+# Check membership status for a specific client
 
-Below we have provided a report query for our database. This report has a description of what it does followed by the code to run
+# Book availability
 
-# Report Description
+# Books due soon
 
-# Report Query
+# Fine calculation for overdue books
+
+<!-- Jack -->
+
+# Members with overdue books and related titles
+
+# Never-late clients
+
+# Frequent borrowers of a specific genre
+
+<!-- Liam -->
+
+# Most popular author in the last month
+
+# Exceeded borrowing limits
+
+
+<!--
+Jorge
+Sam
+
+More report ideas are in canvas -> databases -> files -> project
+
+-->
+## Reports:
+
+Below we have provided two report queries for our database. These reports have a description of what it does followed by the code to run
+
+# Detect books with zero borrows
+
+# Calculate average book age
 
