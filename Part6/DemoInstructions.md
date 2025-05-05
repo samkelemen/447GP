@@ -18,6 +18,8 @@ mysql -h mysql.eecs.ku.edu -u userID -p
 
 Below we have provided some queries to run in our database. Each query has a description of what it does followed by the code to run
 
+<!-- Aiden -->
+
 # List all books by a specific author
 ```SQL
 -- Replace 'Author Name' with the desired author
@@ -51,11 +53,54 @@ LEFT JOIN Membership AS m
 WHERE c.ClientID = 'ClientID';
 ```
 
+<!-- Daniel -->
+
 # Book availability
+```SQL
+-- List each book and how many copies are currently available
+SELECT 
+  b.Title,
+  b.ISBN,
+  b.CopiesAvailable
+FROM Book AS b;
+```
 
 # Books due soon
+```SQL
+-- Show checkouts due in the next 7 days that haven’t been returned
+SELECT 
+  t.TransactionID,
+  b.Title,
+  b.ISBN,
+  t.ClientID,
+  t.DueDate
+FROM `Transaction` AS t
+JOIN Book AS b
+  ON t.ItemID = b.ItemID
+WHERE t.ReturnDate IS NULL
+  AND t.DueDate BETWEEN CURDATE() 
+                    AND DATE_ADD(CURDATE(), INTERVAL 7 DAY);
+```
 
 # Fine calculation for overdue books
+```SQL
+-- Calculate accrued fines for all currently overdue items
+SELECT 
+  t.TransactionID,
+  b.Title,
+  t.ClientID,
+  DATEDIFF(CURDATE(), t.DueDate)
+    * COALESCE(m.LateFee, 0) AS FineAccrued
+FROM `Transaction` AS t
+JOIN Book AS b
+  ON t.ItemID = b.ItemID
+JOIN Client AS c
+  ON t.ClientID = c.ClientID
+LEFT JOIN Membership AS m
+  ON c.MembershipType = m.MembershipType
+WHERE t.ReturnDate IS NULL
+  AND t.DueDate < CURDATE();
+```
 
 <!-- Jack -->
 
